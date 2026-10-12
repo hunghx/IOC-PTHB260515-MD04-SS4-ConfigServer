@@ -18,7 +18,7 @@ public class ApiController {
     public String test(){
         return "Name : "+name +" age :" +age;
     }
-    @GetMapping("/data")
+    @GetMapping("/api/service-b/data")
     public Map<?,?> getData(){
         Map<String , Object> map = new HashMap<>();
         map.put("name","Ho Xuan Hung");

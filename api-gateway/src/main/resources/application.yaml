@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: serviceB
+              uri: http://serviceB  # thay thế thành http://localhost:8081/api/service-b/**
+              predicates:
+                - path=/api/service-b/**
+server:
+  port: 8080
+eureka:
+  client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
