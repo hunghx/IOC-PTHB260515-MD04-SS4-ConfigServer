@@ -1,15 +1,21 @@
 spring:
   application:
     name: serviceA
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/hunghx/session04-configserver
-          default-label: main
-          clone-on-start: true
-          timeout: 5
-#          username:
-#          password:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/hunghx/session04-configserver
+#          default-label: main
+#          clone-on-start: true
+#          timeout: 5
+##          username:
+##          password:
+
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
 server:
-  port: 8888
+  port: 8761
